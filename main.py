@@ -233,17 +233,17 @@ def create_excel_file(table: dict, TRUE_FALSE: bool):
 
     workbook.close()
 
-# def main():
-#     source_str = input('Enter boolean expression: ').replace(' ', '')
-#     priority_str = input('Enter priorities: ')
-#     choose = input('Show:\n1]True/False\n2]1/2\n->> ')
-#     p = create_priorities(priority_str)
-#     r = remake_to_rev_pol_not(source_str, p)
-#     print("Priorities: ", p)
-#     print("Reverse Pol Notation: ", r)
-#     t = create_truth_table(r, list(priority_str.replace(',', '')))
-#     create_excel_file(t, int(choose) - 1)
-#
-#
-# if __name__ == '__main__':
-#     main()
+def main():
+     source_str = input('Enter boolean expression: ').replace(' ', '')
+     priority_str = input('Enter priorities: ')
+     choose = input('Show:\n1]True/False\n2]1/2\n->> ')
+     p = create_priorities(priority_str)
+     r = remake_to_rev_pol_not(source_str, p)
+     print("Priorities: ", p)
+     print("Reverse Pol Notation: ", r)
+     t = create_truth_table(r, list(priority_str.replace(',', '')))
+     create_excel_file(t, int(choose) - 1)
+
+
+if __name__ == '__main__':
+     main()
